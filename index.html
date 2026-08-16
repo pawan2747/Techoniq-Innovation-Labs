@@ -1,0 +1,306 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8"/><meta name="viewport" content="width=device-width,initial-scale=1"/>
+<title>Techoniq Innovation Labs — School Robotics & AI Programs</title>
+<meta name="description" content="Techoniq Innovation Labs partners with schools to deliver hands-on robotics, AI, computer vision and autonomous systems programs — from Arduino foundations to ROS2, LiDAR and 3D-printed builds."/>
+<meta name="theme-color" content="#2877f2"/>
+<link rel="icon" type="image/png" href="favicon.png"/>
+<link rel="apple-touch-icon" href="favicon.png"/>
+<meta property="og:type" content="website"/>
+<meta property="og:title" content="Techoniq Innovation Labs — School Robotics & AI Programs"/>
+<meta property="og:description" content="Hands-on robotics, AI and autonomous systems programs for schools — Arduino to ROS2, LiDAR and 3D printing."/>
+<meta property="og:image" content="og-cover.jpg"/>
+<meta name="twitter:card" content="summary_large_image"/>
+<style>
+:root{--ink:#102047;--muted:#61708e;--blue:#2877f2;--violet:#8b4dff;--cyan:#20c7ff;--green:#42c879;--orange:#ff8b3d;--line:#dbe6f5;--card:rgba(255,255,255,.88);--shadow:0 24px 70px rgba(53,90,160,.14)}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;font-family:Inter,ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;color:var(--ink);background:linear-gradient(180deg,#f8fbff 0%,#eef6ff 48%,#fbfaff 100%);overflow-x:hidden}a{text-decoration:none;color:inherit}button{font:inherit}.site{position:relative;min-height:100vh}.orb{position:absolute;border-radius:50%;filter:blur(2px);pointer-events:none;z-index:0}.orb.a{width:480px;height:480px;background:radial-gradient(circle,#a7e8ff55,transparent 68%);top:120px;right:-120px}.orb.b{width:560px;height:560px;background:radial-gradient(circle,#cda7ff42,transparent 68%);top:680px;left:-180px}.orb.c{width:420px;height:420px;background:radial-gradient(circle,#9de9d044,transparent 68%);top:1450px;right:-120px}
+.nav{height:72px;display:flex;align-items:center;justify-content:space-between;padding:0 5.2vw;position:sticky;top:0;z-index:30;background:rgba(255,255,255,.72);backdrop-filter:blur(22px);border-bottom:1px solid rgba(214,225,241,.72)}.brand{display:flex;align-items:center;gap:10px;font-weight:800}.brand img{width:108px;height:auto;mix-blend-mode:multiply}.navlinks{display:flex;gap:8px;align-items:center}.navlinks a{padding:10px 17px;border-radius:999px;font-size:14px;font-weight:700;color:#1a294d}.navlinks a.active{color:#fff;background:linear-gradient(100deg,#1e78f4,#8d43f8);box-shadow:0 8px 22px #6c6cff35}.join{border:0;color:#fff;background:linear-gradient(100deg,#276be8,#8e35ef);padding:12px 20px;border-radius:999px;font-weight:800;box-shadow:0 10px 25px #6a5cff35;cursor:pointer}.hamb{display:none;border:0;background:#fff;border-radius:12px;padding:9px}
+.hero{position:relative;z-index:1;min-height:610px;padding:66px 5.5vw 0;display:grid;grid-template-columns:1.02fr 1fr;gap:20px;align-items:center;max-width:1500px;margin:auto}.eyebrow{display:inline-flex;gap:8px;padding:8px 14px;border-radius:999px;background:#e8f2ff;border:1px solid #cde1ff;color:#2869db;font-weight:800;font-size:12px}.hero h1{font-size:clamp(44px,5vw,76px);line-height:.98;margin:18px 0 18px;letter-spacing:-3px}.gradient{background:linear-gradient(100deg,#1e64e8,#8a45f6);-webkit-background-clip:text;background-clip:text;color:transparent}.hero p{font-size:18px;line-height:1.65;color:var(--muted);max-width:620px;margin:0}.badges{display:flex;flex-wrap:wrap;gap:10px;margin-top:24px}.badge{display:flex;align-items:center;gap:8px;padding:10px 13px;background:rgba(255,255,255,.78);border:1px solid #dce7f6;border-radius:14px;box-shadow:0 10px 28px rgba(65,96,145,.08);font-size:13px;font-weight:750}.hero-actions{display:flex;gap:12px;margin-top:28px}.primary,.secondary{border:0;padding:14px 20px;border-radius:14px;font-weight:850;cursor:pointer}.primary{color:white;background:linear-gradient(100deg,#226ce9,#8b3ff3);box-shadow:0 14px 30px #5c64ed35}.secondary{background:#fff;border:1px solid #d8e3f2;color:#24375e}.hero-stage{height:540px;position:relative;display:grid;place-items:center;perspective:1300px}.stage-glow{position:absolute;width:520px;height:250px;border-radius:50%;background:radial-gradient(ellipse,#56cfff4d,transparent 68%);bottom:45px;filter:blur(5px)}.ring{position:absolute;width:450px;height:120px;border-radius:50%;border:4px solid #61cfff;box-shadow:0 0 35px #4bbfff55,inset 0 0 22px #6cddff55;bottom:74px;transform:rotateX(65deg)}.ring.two{width:380px;height:95px;border-color:#b47aff;bottom:91px;opacity:.55}.arduino-wrap{position:absolute;z-index:4;width:min(560px,88%);transform-style:preserve-3d;will-change:transform;transition:transform .12s ease-out}.arduino-wrap img{display:block;width:100%;height:auto;filter:drop-shadow(0 35px 25px rgba(27,58,103,.32));mix-blend-mode:multiply}.spec{position:absolute;padding:11px 14px;background:rgba(255,255,255,.88);border:1px solid #dce6f3;border-radius:14px;box-shadow:0 14px 35px #41649318;backdrop-filter:blur(14px);font-size:12px;font-weight:800;z-index:6}.spec small{display:block;color:#7a88a0;font-weight:650;margin-top:3px}.s1{top:70px;left:0}.s2{top:100px;right:0}.s3{bottom:160px;left:10px}.s4{bottom:125px;right:12px}.scrollhint{position:absolute;bottom:12px;z-index:8;font-size:12px;font-weight:800;color:#61708e;text-align:center}.scrollhint span{display:block;font-size:23px;margin-top:5px}
+.section{position:relative;z-index:2;max-width:1400px;margin:0 auto;padding:70px 5vw}.section-title{text-align:center}.section-title h2{font-size:clamp(34px,4vw,52px);letter-spacing:-2px;margin:0 0 8px}.section-title p{margin:0;color:var(--muted);font-size:16px}.programs{display:grid;grid-template-columns:repeat(4,1fr);gap:18px;margin-top:34px}.card{position:relative;background:var(--card);border:1px solid var(--line);border-radius:24px;padding:22px;box-shadow:var(--shadow);backdrop-filter:blur(18px);min-height:460px;display:flex;flex-direction:column;overflow:hidden}.card:hover{transform:translateY(-8px);box-shadow:0 32px 80px rgba(54,87,150,.18);transition:.3s}.card.recommended{border:2px solid #ff9c50;box-shadow:0 28px 90px rgba(255,139,61,.18)}.tag{display:inline-flex;align-self:flex-start;padding:6px 10px;border-radius:999px;font-size:11px;font-weight:900;background:#eaf7ee;color:#26824a}.card:nth-child(2) .tag{background:#e9f3ff;color:#2464cb}.card:nth-child(3) .tag{background:#f1eaff;color:#7442cf}.card:nth-child(4) .tag{background:#fff0e5;color:#e56b1d}.card h3{font-size:23px;line-height:1.05;margin:16px 0 8px}.desc{color:var(--muted);line-height:1.45;font-size:13px;min-height:56px}.price{font-size:31px;font-weight:950;margin-top:12px}.price span{font-size:12px;color:var(--muted);font-weight:700}.monthly{font-size:13px;color:#e66d2d;font-weight:850;margin:5px 0 15px}.points{list-style:none;padding:14px 0;margin:0;border-top:1px solid #e5edf7;display:grid;gap:9px}.points li{font-size:12px;font-weight:750;color:#41516f}.points li:before{content:'✓';color:#2eb667;font-weight:950;margin-right:8px}.card .view{margin-top:auto;width:100%;padding:12px 14px;border-radius:13px;border:1px solid #3275e9;background:#fff;color:#2365cf;font-weight:900;cursor:pointer}.card:nth-child(1) .view{border-color:#49bc72;color:#26884a}.card:nth-child(3) .view{border-color:#8b56ed;color:#7042c8}.card:nth-child(4) .view{border-color:#ff8a3b;color:#d76518;background:#fff8f2}.comparison{margin-top:44px;background:rgba(255,255,255,.85);border:1px solid #dce7f4;border-radius:26px;box-shadow:var(--shadow);overflow:auto}.comparison h3{padding:24px 24px 12px;margin:0;font-size:24px}.table{width:100%;min-width:920px;border-collapse:collapse}.table th,.table td{padding:11px 13px;border-bottom:1px solid #e7eef7;text-align:center;font-size:12px}.table th:first-child,.table td:first-child{text-align:left;font-weight:800}.table th{background:#f8fbff;color:#334669}.yes{color:#1aab59;font-weight:950}.no{color:#a6b1c3}.advanced-detail{margin-top:34px;background:rgba(255,255,255,.9);border:1px solid #dce5f3;border-radius:28px;box-shadow:var(--shadow);padding:28px;position:relative}.detail-head{display:flex;align-items:center;justify-content:space-between;gap:15px;flex-wrap:wrap}.detail-head h3{font-size:28px;margin:0}.most{padding:6px 10px;border-radius:999px;background:#fff0e4;color:#dc6719;font-size:11px;font-weight:900}.tabs{display:flex;gap:8px;overflow:auto;margin:22px 0}.tabs button{border:1px solid #dce5f2;background:#fff;padding:10px 14px;border-radius:999px;color:#405276;font-weight:800;cursor:pointer;white-space:nowrap}.tabs button.active{background:#eaf3ff;color:#1d63d1;border-color:#acd0ff}.detail-grid{display:grid;grid-template-columns:1fr 1fr 1fr;gap:16px}.detail-box{border:1px solid #dfe8f3;border-radius:18px;padding:18px;background:linear-gradient(180deg,#fff,#f8fbff)}.detail-box h4{margin:0 0 10px}.detail-box ul{margin:0;padding-left:18px;color:#52627f;line-height:1.75;font-size:13px}.investment{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin-top:18px}.metric{border:1px solid #dce6f3;border-radius:16px;padding:15px;background:#fff;text-align:center}.metric b{display:block;font-size:20px}.metric span{display:block;color:#70809b;font-size:11px;margin-top:4px}.cta{margin-top:20px;padding:18px 20px;border-radius:18px;background:linear-gradient(100deg,#eaf4ff,#f3eaff);display:flex;align-items:center;justify-content:space-between;gap:15px}.cta b{font-size:17px}.cta button{border:0;color:#fff;background:linear-gradient(100deg,#2a6eea,#8843f4);padding:12px 18px;border-radius:12px;font-weight:900;cursor:pointer}
+.footer{padding:40px 5vw;border-top:1px solid #dfe8f4;background:rgba(255,255,255,.75);text-align:center;color:#6d7b95}.footer strong{color:#1e2e53}
+.modal{position:fixed;inset:0;background:rgba(18,35,68,.35);backdrop-filter:blur(12px);display:none;align-items:center;justify-content:center;padding:20px;z-index:100}.modal.open{display:flex}.modal-card{width:min(1050px,100%);max-height:90vh;overflow:auto;background:#fff;border:1px solid #dce7f4;border-radius:28px;box-shadow:0 40px 120px rgba(22,42,79,.3);padding:28px;position:relative}.close{position:absolute;right:20px;top:18px;border:1px solid #dce5f2;background:#fff;border-radius:50%;width:38px;height:38px;cursor:pointer;font-size:18px}.modal-title{padding-right:50px}.modal-title h2{margin:0 0 8px;font-size:32px}.modal-title p{color:var(--muted)}.modal-grid{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-top:20px}.modal-box{border:1px solid #e0e8f4;border-radius:18px;padding:18px}.modal-box h4{margin:0 0 10px}.modal-box ul{margin:0;padding-left:18px;line-height:1.75;color:#52617e}.modal-price{display:flex;gap:15px;align-items:center;flex-wrap:wrap;margin-top:20px}.modal-price strong{font-size:30px}.modal-price span{color:#6c7b95}.mobile-only{display:none}
+
+.about-points{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin-top:20px}.about-points div{padding:16px;border:1px solid #dfe8f3;border-radius:16px;background:linear-gradient(180deg,#fff,#f8fbff)}.about-points b{display:block;font-size:14px;margin-bottom:5px}.about-points span{color:var(--muted);font-size:12px;line-height:1.45}.contact-grid{display:grid;grid-template-columns:.85fr 1.15fr;gap:22px;margin-top:24px}.contact-info{display:grid;gap:12px}.contact-item{display:flex;gap:13px;padding:17px;border:1px solid #dfe8f3;border-radius:16px;background:#fff}.contact-item>span{font-size:22px}.contact-item b{display:block;margin-bottom:4px}.contact-item a,.contact-item div>span{color:#536481;font-size:13px;text-decoration:none}.enquiry-form{padding:20px;border:1px solid #dfe8f3;border-radius:20px;background:linear-gradient(180deg,#fff,#f8fbff);display:grid;gap:12px}.form-row{display:grid;grid-template-columns:1fr 1fr;gap:12px}.enquiry-form input,.enquiry-form select,.enquiry-form textarea{width:100%;box-sizing:border-box;border:1px solid #d6e2f1;background:#fff;border-radius:12px;padding:13px 14px;font:inherit;color:#203252;outline:none}.enquiry-form input:focus,.enquiry-form select:focus,.enquiry-form textarea:focus{border-color:#7daff3;box-shadow:0 0 0 4px #dcecff}.enquiry-form small{color:#7a88a0;font-size:11px;line-height:1.4}
+.sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}
+
+@media(max-width:1050px){.programs{grid-template-columns:repeat(2,1fr)}.hero{grid-template-columns:1fr}.hero-stage{height:500px}.navlinks{display:none}.hamb{display:block}.investment{grid-template-columns:repeat(2,1fr)}.detail-grid{grid-template-columns:1fr 1fr}}
+@media(max-width:700px){.nav{padding:0 18px}.brand img{width:94px}.join{display:none}.hero{padding:42px 20px 0}.hero h1{font-size:44px;letter-spacing:-2px}.hero p{font-size:15px}.hero-stage{height:400px}.arduino-wrap{width:95%}.spec{font-size:10px;padding:8px 9px}.s1{left:-4px;top:35px}.s2{right:-4px;top:65px}.s3{left:-4px;bottom:130px}.s4{right:-4px;bottom:100px}.programs{grid-template-columns:1fr}.section{padding:52px 18px}.card{min-height:420px}.detail-grid,.modal-grid{grid-template-columns:1fr}.investment{grid-template-columns:1fr 1fr}.cta{align-items:flex-start;flex-direction:column}.mobile-only{display:block}}
+</style>
+<style>
+.project-gallery{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:22px;margin-top:30px}.project-card{background:rgba(255,255,255,.86);border:1px solid #dce7f5;border-radius:24px;overflow:hidden;box-shadow:0 18px 45px rgba(54,88,135,.10);transition:transform .28s ease,box-shadow .28s ease,border-color .28s ease}.project-card:hover{transform:translateY(-7px);box-shadow:0 28px 60px rgba(54,88,135,.17);border-color:#b9d2f5}.project-card img{display:block;width:100%;height:auto;aspect-ratio:16/9;object-fit:cover;object-position:center;background:linear-gradient(135deg,#eaf3ff,#f3edff)}.project-info{padding:18px 20px 20px}.project-info h4{margin:0 0 7px;font-size:20px;color:#182744}.project-info p{margin:0;color:#667a95;font-size:14px;line-height:1.55}.project-tag{display:inline-flex;padding:6px 10px;border-radius:999px;background:#edf5ff;color:#2169d2;font-size:11px;font-weight:900;letter-spacing:.05em;margin-bottom:10px}.project-level{margin-top:13px;font-size:12px;color:#8091a8;font-weight:700}.project-download{display:inline-flex;margin-top:14px;padding:9px 13px;border-radius:12px;background:#f3f7fd;color:#245fae;text-decoration:none;font-weight:800;font-size:12px}.project-download:hover{background:#e6f0ff}.scroll-target{scroll-margin-top:92px}@media(max-width:700px){.project-gallery{grid-template-columns:1fr;gap:18px}.project-info{padding:16px}.project-info h4{font-size:18px}}
+</style>
+
+<style>
+/* Responsive + interaction polish */
+html{scroll-padding-top:86px}
+.navlinks a,.join,.primary,.secondary,.view,.cta button,.tabs button,.close{transition:transform .2s ease,box-shadow .2s ease,background .2s ease,border-color .2s ease}
+.navlinks a:hover{background:#edf5ff;color:#175fd0}.join:hover,.primary:hover,.cta button:hover{transform:translateY(-2px);box-shadow:0 16px 32px rgba(65,91,190,.22)}
+.secondary:hover,.view:hover,.tabs button:hover{transform:translateY(-2px);box-shadow:0 10px 24px rgba(56,88,145,.10)}
+.card{transition:transform .28s ease,box-shadow .28s ease,border-color .28s ease}.card .view{margin-top:18px}.programs{align-items:stretch}.card h3{min-height:50px}.card .desc{min-height:72px}
+.detail-box{min-width:0}.detail-box p{color:var(--muted);line-height:1.7;margin:0}.comparison{scrollbar-width:thin}.comparison::-webkit-scrollbar{height:8px}.comparison::-webkit-scrollbar-thumb{background:#cbd9ee;border-radius:999px}
+.modal-card{overscroll-behavior:contain}.modal-box li{margin-bottom:4px}.modal-price{display:flex;flex-wrap:wrap;gap:10px;margin-top:20px}.modal-price>*{padding:11px 14px;border:1px solid #dce6f3;border-radius:12px;background:#f8fbff;font-weight:800;color:#31466c}
+.mobile-menu{display:none}
+@media (max-width:1100px){
+ .nav{padding:0 24px}.navlinks{gap:2px}.navlinks a{padding:9px 11px;font-size:13px}.hero{padding-left:30px;padding-right:30px}.programs{grid-template-columns:repeat(2,1fr)}.detail-grid{grid-template-columns:1fr 1fr}.investment{grid-template-columns:repeat(2,1fr)}
+}
+@media (max-width:800px){
+ body{font-size:15px}.nav{height:66px;padding:0 18px}.brand img{width:102px}.navlinks,.nav>.join{display:none}.hamb{display:block;border:1px solid #d9e5f4;box-shadow:0 8px 20px rgba(55,88,140,.08);cursor:pointer;font-size:20px;line-height:1;width:42px;height:42px}
+ .mobile-menu{position:fixed;display:none;top:66px;left:12px;right:12px;z-index:80;padding:10px;background:rgba(255,255,255,.96);border:1px solid #dbe6f3;border-radius:18px;box-shadow:0 24px 60px rgba(36,65,110,.18);backdrop-filter:blur(20px)}
+ .mobile-menu.open{display:grid}.mobile-menu a{padding:14px 15px;border-radius:12px;font-weight:800;color:#233656}.mobile-menu a:hover{background:#eef6ff;color:#1d63d1}.mobile-menu .mobile-join{margin-top:4px;text-align:center;color:#fff;background:linear-gradient(100deg,#276be8,#8e35ef)}
+ .hero{min-height:auto;padding:38px 18px 0;display:flex;flex-direction:column;gap:12px}.hero>div:first-child{width:100%}.hero h1{font-size:clamp(40px,12vw,58px);letter-spacing:-2px}.hero p{font-size:16px}.hero-actions{flex-wrap:wrap}.hero-actions button{flex:1;min-width:160px}.badges{gap:8px}.badge{font-size:12px;padding:9px 10px}.hero-stage{width:100%;height:390px;margin-top:6px;overflow:hidden}.stage-glow{width:340px;height:170px}.ring{width:310px;height:86px;bottom:62px}.ring.two{width:260px;height:70px;bottom:74px}.arduino-wrap{width:min(430px,92vw)}.spec{font-size:10px;padding:8px 9px}.spec small{font-size:9px}.s1{top:38px;left:0}.s2{top:54px;right:0}.s3{bottom:116px;left:0}.s4{bottom:95px;right:0}.scrollhint{bottom:2px;font-size:10px}.scrollhint span{font-size:20px}
+ .section{padding:52px 18px}.section-title h2{font-size:34px;letter-spacing:-1.4px}.section-title p{font-size:14px;line-height:1.5}.programs{grid-template-columns:1fr;gap:14px;margin-top:24px}.card{min-height:0;padding:20px;border-radius:20px}.card h3{font-size:22px;min-height:0}.card .desc{min-height:0}.points{gap:8px}.points li{font-size:12px}.comparison{margin-top:28px;border-radius:20px}.comparison h3{font-size:19px;padding:20px 18px 12px}.table{min-width:760px}.table th,.table td{padding:9px 10px;font-size:11px}
+ .advanced-detail{margin-top:24px;padding:18px;border-radius:22px}.detail-head h3{font-size:23px;line-height:1.15}.tabs{margin:16px -2px 18px;padding-bottom:3px}.tabs button{font-size:12px;padding:9px 11px}.detail-grid{grid-template-columns:1fr;gap:12px}.detail-box{padding:15px}.detail-box h4{font-size:15px}.detail-box ul{font-size:12px;line-height:1.65}.investment{grid-template-columns:1fr 1fr;gap:9px}.metric{padding:12px 8px}.metric b{font-size:17px}.metric span{font-size:10px}.cta{flex-direction:column;align-items:stretch;padding:16px}.cta button{width:100%}
+ .about-points{grid-template-columns:1fr 1fr!important}.contact-grid{grid-template-columns:1fr!important}.form-row{grid-template-columns:1fr!important}.enquiry-form{padding:16px}.enquiry-form input,.enquiry-form select,.enquiry-form textarea{font-size:16px}.contact-item{padding:14px}.footer{padding:30px 18px;font-size:12px}
+ .modal{padding:10px;align-items:flex-end}.modal-card{max-height:92vh;border-radius:24px 24px 0 0;padding:20px 16px}.modal-title h2{font-size:25px}.modal-grid{grid-template-columns:1fr;gap:10px}.modal-price{gap:7px}.modal-price>*{font-size:12px;padding:9px 10px}.modal .primary{width:100%}
+}
+@media (max-width:480px){
+ .brand img{width:94px}.hero h1{font-size:40px}.hero-stage{height:340px}.arduino-wrap{width:92vw}.spec{display:none}.badges .badge{flex:1 1 calc(50% - 8px);justify-content:center}.hero-actions{display:grid;grid-template-columns:1fr}.hero-actions button{width:100%}.investment{grid-template-columns:1fr}.about-points{grid-template-columns:1fr!important}.section{padding-left:14px;padding-right:14px}
+}
+@media (prefers-reduced-motion:reduce){*,*:before,*:after{scroll-behavior:auto!important;transition:none!important;animation:none!important}}
+</style>
+
+<style id="techoniq-mobile-premium-fix">
+/* FINAL RESPONSIVE / MOBILE STABILITY LAYER */
+html{width:100%;max-width:100%;overflow-x:hidden;scroll-padding-top:76px}
+body{width:100%;max-width:100%;overflow-x:hidden}
+*,*::before,*::after{box-sizing:border-box;max-width:100%}
+.site{width:100%;max-width:100%;overflow-x:clip}
+img,svg,video,canvas{max-width:100%;height:auto}
+.nav{width:100%;max-width:100%;overflow:visible}
+.hero,.section,.detail-grid,.programs,.project-gallery,.experience-grid,.contact-grid{min-width:0}
+.hero{overflow:clip}
+.hero-stage{width:100%;max-width:100%;overflow:hidden;contain:layout paint}
+.arduino-wrap{max-width:92%;}
+.project-card,.card,.advanced-detail,.detail-box,.modal-card,.experience-card{min-width:0}
+.project-gallery{grid-template-columns:repeat(2,minmax(0,1fr))}
+.comparison{width:100%;max-width:100%;overflow-x:auto;overflow-y:hidden;-webkit-overflow-scrolling:touch}
+.comparison .table{min-width:760px}
+.detail-grid{min-width:0}
+.modal{overflow:hidden}
+.modal-card{overflow:auto;-webkit-overflow-scrolling:touch}
+.experience-grid{display:grid;grid-template-columns:repeat(12,minmax(0,1fr));gap:18px;margin-top:30px}
+.experience-card{grid-column:span 4;background:rgba(255,255,255,.88);border:1px solid #dce7f5;border-radius:24px;overflow:hidden;box-shadow:0 18px 45px rgba(54,88,135,.09);transition:transform .25s ease,box-shadow .25s ease}
+.experience-card:hover{transform:translateY(-6px);box-shadow:0 24px 55px rgba(54,88,135,.15)}
+.experience-card.experience-main{grid-column:span 6}
+.experience-card img{display:block;width:100%;height:auto;aspect-ratio:4/3;object-fit:cover;object-position:center;background:linear-gradient(135deg,#eaf3ff,#f3edff)}
+.experience-main img{aspect-ratio:16/10}
+.experience-card>div{padding:18px}
+.experience-card span{font-size:11px;font-weight:800;letter-spacing:1.5px;color:#1769d2}
+.experience-card h3{margin:7px 0 7px;font-size:20px;letter-spacing:-.4px}
+.experience-card p{margin:0;color:var(--muted);line-height:1.6;font-size:14px}
+.most{display:inline-flex;font-size:11px;font-weight:900;letter-spacing:2px;color:#1769d2}
+@media(max-width:900px){
+  .experience-grid{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .experience-card,.experience-card.experience-main{grid-column:span 1}
+  .experience-main img{aspect-ratio:4/3}
+}
+@media(max-width:700px){
+  html{scroll-padding-top:68px}
+  .hero,.section{max-width:100%;width:100%}
+  .hero{padding-left:18px!important;padding-right:18px!important}
+  .section{padding-left:16px!important;padding-right:16px!important}
+  .hero-stage{height:360px!important;margin-top:8px}
+  .arduino-wrap{width:min(92vw,430px)!important;max-width:92vw!important}
+  .project-gallery{grid-template-columns:1fr!important;gap:16px}
+  .project-card{border-radius:20px}
+  .experience-grid{grid-template-columns:1fr;gap:16px}
+  .experience-card,.experience-card.experience-main{grid-column:1}
+  .experience-main img{aspect-ratio:16/9}
+  .comparison{margin-left:0;margin-right:0;width:100%}
+  .comparison .table{min-width:700px}
+  .tabs{max-width:100%;overflow-x:auto;white-space:nowrap;scrollbar-width:none}
+  .tabs::-webkit-scrollbar{display:none}
+  .modal{padding:0!important;align-items:flex-end}
+  .modal-card{width:100%!important;max-width:100%!important;border-radius:24px 24px 0 0!important;max-height:92vh!important}
+  .contact-grid,.form-row{min-width:0}
+  input,textarea,select,button{max-width:100%}
+}
+@media(max-width:480px){
+  .nav{padding-left:14px!important;padding-right:14px!important}
+  .brand img{width:92px!important}
+  .hero h1{font-size:clamp(36px,11vw,46px)!important}
+  .hero-stage{height:330px!important}
+  .arduino-wrap{width:88vw!important}
+  .card{padding:18px!important}
+  .section-title h2{font-size:31px!important}
+}
+@media(prefers-reduced-motion:reduce){.experience-card{transition:none}.experience-card:hover{transform:none}}
+/* Graceful placeholder for any image that fails to load, so a missing asset never shows a broken-image icon. Real photos will display normally once files with the same names are added. */
+img.broken{color:transparent;font-size:0;background:linear-gradient(135deg,#dce9ff,#efe3ff)!important;box-shadow:inset 0 0 0 1px #c8d8f0}
+</style>
+
+</head>
+<body>
+<div class="site"><div class="orb a"></div><div class="orb b"></div><div class="orb c"></div>
+<header class="nav"><a class="brand" href="#"><img src="logo-final-transparent.png" alt="Techoniq Innovation Labs" width="108" height="63" decoding="async"></a><nav class="navlinks" id="desktopNav"><a href="#top" data-nav="top">Home</a><a href="#programs" data-nav="programs">Programs</a><a href="#lab" data-nav="lab">Advanced Lab</a><a href="#projects" data-nav="projects">Projects</a><a href="#experience" data-nav="experience">Experience</a><a href="#about-details" data-nav="about-details">About Us</a><a href="#contact" data-nav="contact">Contact</a></nav><button class="join" onclick="smoothTo('contact')">Join Now →</button><button class="hamb" id="hamb" aria-label="Open menu" aria-expanded="false">☰</button></header><nav class="mobile-menu" id="mobileMenu"><a href="#top">Home</a><a href="#programs">Programs</a><a href="#lab">Advanced Lab</a><a href="#projects">Projects</a><a href="#experience">Experience</a><a href="#about-details">About Us</a><a href="#contact">Contact</a><a class="mobile-join" href="#contact">Request a Discussion →</a></nav>
+<section class="hero" id="top"><div><span class="eyebrow">✦ PROGRAMS & PACKAGES</span><h1>Choose the Right<br><span class="gradient">Robotics Journey</span></h1><p>Step-by-step learning paths from electronics and coding to AI-powered autonomous systems — designed for real school labs and real student projects.</p><div class="badges"><div class="badge">⌘ Hands-on Learning</div><div class="badge">◉ Industry Relevant</div><div class="badge">⌂ Real-world Projects</div><div class="badge">♢ Future Ready</div></div><div class="hero-actions"><button class="primary" onclick="smoothTo('programs')">Explore Packages →</button><button class="secondary" onclick="smoothTo('contact')">Request Discussion</button></div></div>
+<div class="hero-stage" id="stage"><div class="stage-glow"></div><div class="ring"></div><div class="ring two"></div><div class="arduino-wrap" id="arduino"><img src="arduino-raw.png" alt="Arduino UNO R3 board" width="560" height="448" decoding="async" fetchpriority="high"></div><div class="spec s1">ATmega328P<small>Microcontroller</small></div><div class="spec s2">16 MHz<small>Clock Speed</small></div><div class="spec s3">14 Digital I/O<small>6 Analog Inputs</small></div><div class="spec s4">Open Source<small>Robotics Platform</small></div><div class="scrollhint">Scroll to explore<span>⌄</span></div></div></section>
+<section class="section scroll-target" id="programs"><div class="section-title"><h2>Our <span class="gradient">Robotics Programs</span></h2><p>Build skills. Create innovation. Shape the future.</p></div><div class="programs" id="cards"></div><div class="comparison"><h3>Program Comparison — See the Difference at Every Level</h3><table class="table" id="compare"></table></div><div class="advanced-detail" id="detail"></div></section>
+<section class="section scroll-target" id="lab"><div class="section-title"><h2>Advanced <span class="gradient">Robotics Lab</span></h2><p>A shared school ecosystem for AI, autonomous robotics and digital manufacturing.</p></div><div class="detail-grid" style="margin-top:30px"><div class="detail-box"><h4>🖨️ Digital Manufacturing</h4><ul><li>3D printer & prototyping</li><li>CAD-to-part workflow</li><li>Custom robot components</li></ul></div><div class="detail-box"><h4>🤖 Autonomous Systems</h4><ul><li>LiDAR & mapping</li><li>SLAM concepts</li><li>Autonomous navigation</li></ul></div><div class="detail-box"><h4>🦾 Industry Automation</h4><ul><li>Robotic arm</li><li>Mini conveyor</li><li>Vision-based sorting</li></ul></div></div></section>
+<section class="section scroll-target" id="projects"><div class="section-title"><h2>Real <span class="gradient">Student Projects</span></h2><p>From Arduino fundamentals to ESP32, AI vision and autonomous robotics — students build progressively more capable systems.</p></div><div class="project-gallery">
+<div class="project-card"><img src="01-arduino-led-control.jpg" width="640" height="360" loading="lazy" decoding="async" alt="Arduino LED and buzzer project"><div class="project-info"><span class="project-tag">ARDUINO • BEGINNER</span><h4>Arduino LED & Buzzer Lab</h4><p>Digital I/O, timing, buttons, LEDs and buzzer control — the first step into embedded programming.</p><div class="project-level">Level 01 • Electronics Foundation</div><a class="project-download" href="01-arduino-led-control.jpg" download>Download Project Image</a></div></div>
+<div class="project-card"><img src="02-arduino-traffic-light.jpg" width="640" height="360" loading="lazy" decoding="async" alt="Arduino smart traffic light project"><div class="project-info"><span class="project-tag">ARDUINO • BEGINNER</span><h4>Smart Traffic Light</h4><p>Traffic LEDs, push-button input, buzzer and countdown logic introduce real-world control systems.</p><div class="project-level">Level 02 • Control Systems</div><a class="project-download" href="02-arduino-traffic-light.jpg" download>Download Project Image</a></div></div>
+<div class="project-card"><img src="03-arduino-line-follower.jpg" width="640" height="360" loading="lazy" decoding="async" alt="Arduino line following robot"><div class="project-info"><span class="project-tag">ARDUINO • FOUNDATION</span><h4>Line Following Robot</h4><p>IR sensing, motor control and decision logic combine to create a robot that follows a marked path.</p><div class="project-level">Level 03 • Mobile Robotics</div><a class="project-download" href="03-arduino-line-follower.jpg" download>Download Project Image</a></div></div>
+<div class="project-card"><img src="04-arduino-obstacle-bot.jpg" width="640" height="360" loading="lazy" decoding="async" alt="Arduino obstacle avoidance robot"><div class="project-info"><span class="project-tag">ARDUINO • INTERMEDIATE</span><h4>Obstacle Avoidance Robot</h4><p>Ultrasonic sensing, servo scanning and motor decisions teach robots to react to their environment.</p><div class="project-level">Level 04 • Autonomous Response</div><a class="project-download" href="04-arduino-obstacle-bot.jpg" download>Download Project Image</a></div></div>
+<div class="project-card"><img src="05-arduino-smart-rescue.jpg" width="640" height="360" loading="lazy" decoding="async" alt="Arduino smart rescue bot"><div class="project-info"><span class="project-tag">ARDUINO • INTERMEDIATE</span><h4>Smart Rescue Bot</h4><p>A mission-based robot combining sensing, alerts, movement and a practical rescue mechanism.</p><div class="project-level">Level 05 • Mission Robotics</div><a class="project-download" href="05-arduino-smart-rescue.jpg" download>Download Project Image</a></div></div>
+<div class="project-card"><img src="06-esp32-wifi-relay.jpg" width="640" height="360" loading="lazy" decoding="async" alt="ESP32 Wi-Fi smart control project"><div class="project-info"><span class="project-tag">ESP32 • INTERMEDIATE</span><h4>ESP32 Wi-Fi Smart Control</h4><p>Students build a web-controlled device using ESP32 Wi-Fi and relay-based automation.</p><div class="project-level">Level 06 • IoT & Connectivity</div><a class="project-download" href="06-esp32-wifi-relay.jpg" download>Download Project Image</a></div></div>
+<div class="project-card"><img src="07-esp32-iot-monitor.jpg" width="640" height="360" loading="lazy" decoding="async" alt="ESP32 IoT monitoring project"><div class="project-info"><span class="project-tag">ESP32 • ADVANCED</span><h4>ESP32 IoT Monitoring</h4><p>Sensor data, live dashboards and connected devices introduce students to practical IoT systems.</p><div class="project-level">Level 07 • IoT Systems</div><a class="project-download" href="07-esp32-iot-monitor.jpg" download>Download Project Image</a></div></div>
+<div class="project-card"><img src="08-esp32-cam-vision.jpg" width="640" height="360" loading="lazy" decoding="async" alt="ESP32-CAM computer vision robot"><div class="project-info"><span class="project-tag">ESP32 • ADVANCED</span><h4>ESP32-CAM Vision Robot</h4><p>Camera streaming, visual tracking and computer-vision concepts move robotics beyond simple sensors.</p><div class="project-level">Level 08 • Computer Vision</div><a class="project-download" href="08-esp32-cam-vision.jpg" download>Download Project Image</a></div></div>
+<div class="project-card"><img src="09-esp32-autonomous-robot.webp" width="640" height="360" loading="lazy" decoding="async" alt="ESP32 autonomous robot"><div class="project-info"><span class="project-tag">ESP32 • ADVANCED</span><h4>ESP32 Autonomous Robot</h4><p>Encoders, IMU, sensor fusion and navigation logic introduce more advanced autonomous behavior.</p><div class="project-level">Level 09 • Autonomous Robotics</div><a class="project-download" href="09-esp32-autonomous-robot.webp" download>Download Project Image</a></div></div>
+<div class="project-card"><img src="10-ai-autonomous-service-robot.jpg" width="640" height="360" loading="lazy" decoding="async" alt="AI autonomous service robot"><div class="project-info"><span class="project-tag">AI + AUTONOMOUS • FLAGSHIP</span><h4>AI Autonomous Service Robot</h4><p>Flagship project combining AI, computer vision, mapping, navigation and advanced robotic integration.</p><div class="project-level">Level 10 • Flagship Capstone</div><a class="project-download" href="10-ai-autonomous-service-robot.jpg" download>Download Project Image</a></div></div>
+</div></section>
+
+<section class="section scroll-target real-lab" id="experience">
+  <div class="section-title">
+    <span class="most">REAL HANDS-ON EXPERIENCE</span>
+    <h2>Learning Happens <span class="gradient">at the Workbench</span></h2>
+    <p>Students learn by wiring, coding, testing, assembling and improving real electronics and robotics projects.</p>
+  </div>
+  <div class="experience-grid">
+    <article class="experience-card experience-main"><img src="IMG_6955.jpg" alt="Students receiving hands-on robotics and electronics training" width="640" height="480" loading="lazy" decoding="async"><div><span>HANDS-ON TRAINING</span><h3>Build. Test. Fix. Build Again.</h3><p>Practical sessions turn concepts into working prototypes through guided electronics, motors, controllers and robotics work.</p></div></article>
+    <article class="experience-card"><img src="IMG_6964.jpg" alt="Students working on robotics electronics and programming" width="640" height="480" loading="lazy" decoding="async"><div><span>ROBOTICS WORKBENCH</span><h3>Hardware + Code</h3><p>Students work with controllers, motors, wiring and software side-by-side.</p></div></article>
+    <article class="experience-card"><img src="IMG_6968.jpg" alt="Students working around a robotics lab workstation" width="640" height="480" loading="lazy" decoding="async"><div><span>PROJECT BUILDING</span><h3>Team-Based Problem Solving</h3><p>Projects are built collaboratively with testing and troubleshooting at every stage.</p></div></article>
+    <article class="experience-card"><img src="IMG_7009.jpg" alt="Students building a robotics project in a lab" width="640" height="480" loading="lazy" decoding="async"><div><span>PROTOTYPING</span><h3>From Idea to Prototype</h3><p>Students turn mechanical and electronic ideas into functional builds.</p></div></article>
+    <article class="experience-card"><img src="IMG_7011.jpg" alt="Students assembling an electronics project" width="640" height="480" loading="lazy" decoding="async"><div><span>MAKER LEARNING</span><h3>Real Components. Real Skills.</h3><p>Hands-on assembly builds confidence with components, tools, motors and circuits.</p></div></article>
+    <article class="experience-card"><img src="IMG_7013.jpg" alt="Students collaborating on an electronics and robotics project" width="640" height="480" loading="lazy" decoding="async"><div><span>COLLABORATION</span><h3>Learn by Doing Together</h3><p>Students communicate, divide tasks and solve hardware problems as a team.</p></div></article>
+  </div>
+</section>
+
+<section class="section" id="about"><div class="section-title"><h2>Built for <span class="gradient">Real Learning</span></h2><p>Students learn by designing, building, testing and improving.</p></div></section>
+<section class="section scroll-target" id="about-details"><div class="advanced-detail about-card"><div class="detail-head"><div><span class="most">ABOUT TECHONIQ</span><h3>We Build the Next Generation of Robotics Learners.</h3><p style="color:var(--muted);max-width:920px">At Techoniq Innovation Labs, we focus on advanced, real-world robotics and AI projects—not just basic demonstrations. Our students work with modern technologies such as autonomous navigation, computer vision, AI, IoT, LiDAR, SLAM, 3D printing and robotic automation, turning ideas into working prototypes they can understand, test and improve.</p></div></div><div class="about-points"><div><b>Real Projects</b><span>Students learn by building working systems.</span></div><div><b>Latest Technologies</b><span>AI, vision, autonomous robotics and 3D manufacturing.</span></div><div><b>Hands-on Learning</b><span>Design, build, code, test and improve.</span></div><div><b>Competition Ready</b><span>Project mentoring and showcase preparation.</span></div></div></div></section>
+<section class="section scroll-target" id="contact"><div class="advanced-detail"><div class="detail-head"><div><span class="most">SCHOOL PARTNERSHIP</span><h3>Build a Future-Ready Robotics & AI Lab</h3><p style="color:var(--muted)">Tell us about your school and we’ll prepare a tailored program discussion.</p></div></div><div class="contact-grid"><div class="contact-info"><div class="contact-item"><span>📞</span><div><b>Phone / WhatsApp</b><a href="https://wa.me/918619348905" target="_blank" rel="noopener">+91 86193 48905</a></div></div><div class="contact-item"><span>✉️</span><div><b>Email</b><a href="mailto:techoniqlabs@gmail.com">techoniqlabs@gmail.com</a></div></div><a class="contact-item" href="https://wa.me/918619348905" target="_blank" rel="noopener"><span>💬</span><div><b>WhatsApp Enquiry</b><span>Chat directly with our team for school program discussions.</span></div></a></div><form class="enquiry-form" id="enquiryForm" novalidate><div class="form-row"><label class="sr-only" for="f-school">School name</label><input id="f-school" name="school" required placeholder="School Name" autocomplete="organization"/><label class="sr-only" for="f-person">Principal or contact person</label><input id="f-person" name="person" required placeholder="Principal / Contact Person" autocomplete="name"/></div><div class="form-row"><label class="sr-only" for="f-phone">Phone number</label><input id="f-phone" name="phone" type="tel" required placeholder="Phone Number" autocomplete="tel" pattern="[0-9+\-\s()]{7,15}"/><label class="sr-only" for="f-students">Approximate number of students</label><input id="f-students" name="students" required type="number" min="1" placeholder="Approx. Students"/></div><label class="sr-only" for="f-email">Email address</label><input id="f-email" name="email" type="email" placeholder="Email (optional)" autocomplete="email"/><label class="sr-only" for="f-program">Select a program</label><select id="f-program" name="program" required><option value="">Select a Program</option><option>Foundation Robotics — ₹5,000/year</option><option>Robotics Pro — ₹8,000/year</option><option>AI Robotics — ₹12,000/year</option><option>Advanced AI & Autonomous — ₹15,000/year</option></select><label class="sr-only" for="f-message">Message</label><textarea id="f-message" name="message" rows="4" placeholder="Tell us anything important about your school or lab requirement..."></textarea><button class="primary" type="submit">Send Enquiry on WhatsApp →</button><small>We’ll prepare the discussion based on your details. No payment is required through this form.</small></form></div></div></section>
+<footer class="footer"><strong>Techoniq Innovation Labs</strong> — Learn • Build • Innovate • Lead</footer></div>
+<div class="modal" id="modal" role="dialog" aria-modal="true" aria-labelledby="mTitle"><div class="modal-card"><button class="close" onclick="closeModal()" aria-label="Close program details">×</button><div class="modal-title"><span class="most" id="mTag"></span><h2 id="mTitle"></h2><p id="mDesc"></p></div><div class="modal-grid" id="mGrid"></div><div class="modal-price"><strong id="mPrice"></strong><span id="mMonthly"></span><span id="mLab"></span></div><button class="primary" style="margin-top:18px" onclick="closeModal();document.getElementById('contact').scrollIntoView({behavior:'smooth'})">Request Program Discussion →</button></div></div>
+<script>
+const packages=[
+{name:'Foundation Robotics',tag:'BEGINNER FRIENDLY',price:'₹5,000',monthly:'≈ ₹417 / month',lab:'One-time lab setup: ₹75,000',desc:'Learn the foundations of electronics, Arduino programming and basic robotics.',points:['Basic electronics & Arduino','Sensors & motor control','Line following & obstacle avoidance','10+ guided projects'],curr:['Electronics fundamentals','Arduino programming','Sensors and actuators','Motors and motor drivers','Basic robot assembly'],projects:['Line Following Robot','Obstacle Avoidance Robot','Smart Rescue Bot','+ 7 guided projects'],components:['Arduino-compatible board','Motors & chassis','Ultrasonic / IR sensors','Servo, LEDs, buzzer and wiring'],outcomes:['Build and control basic robots','Understand sensors and motors','Complete hands-on prototypes']},
+{name:'Robotics Pro',tag:'INTERMEDIATE',price:'₹8,000',monthly:'≈ ₹667 / month',lab:'One-time lab setup: ₹1,25,000',desc:'Move beyond basic robots into automation, navigation and autonomous response.',points:['Advanced Arduino programming','Multiple sensors & actuators','Automation & navigation','14+ guided projects'],curr:['Advanced electronics','Sensor integration','Motor control','Automation logic','Autonomous response'],projects:['Autonomous Delivery Robot','Smart Surveillance Robot','Maze Solver','+ 11 guided projects'],components:['Arduino + advanced sensors','Encoder / motor systems','Servo mechanisms','Navigation and testing equipment'],outcomes:['Build autonomous responses','Integrate multiple sensors','Prepare robots for challenges']},
+{name:'AI Robotics',tag:'ADVANCED',price:'₹12,000',monthly:'≈ ₹1,000 / month',lab:'One-time lab setup: ₹2,00,000',desc:'Teach robots to see, recognize objects and make intelligent decisions.',points:['Python & AI foundations','Computer vision','Object detection','14+ guided projects'],curr:['Python for robotics','ESP32 / IoT','Camera integration','Computer vision','Object detection'],projects:['AI Vision Robot','Human Following Robot','Smart Inspection Bot','+ 11 guided projects'],components:['ESP32 / ESP32-CAM','Camera modules','AI computing setup','IMU and smart sensors'],outcomes:['Build vision-based robots','Use AI for decisions','Connect IoT and robotics']},
+{name:'Advanced AI & Autonomous',tag:'MOST ADVANCED',price:'₹15,000',monthly:'≈ ₹1,250 / month',lab:'One-time lab setup: ₹3,00,000',desc:'Design, manufacture and program autonomous systems using AI, ROS, LiDAR, SLAM and 3D printing.',points:['ROS / ROS2','LiDAR & SLAM','Autonomous navigation','CAD + 3D printing','Robotic arm & Industry 4.0','14+1 projects'],curr:['ROS / ROS2 fundamentals','LiDAR & SLAM','Computer vision + AI','Path planning','CAD and 3D printing','Robotic arm automation'],projects:['Autonomous Service Robot','LiDAR Mapping Robot','Warehouse Navigation Robot','AI Vision Inspection Robot','Robotic Arm Pick & Place','+ 9 guided projects'],components:['LiDAR platform','ROS/ROS2-compatible setup','AI computing','3D printer access','Robotic arm','Advanced sensors'],outcomes:['Build autonomous robots','Map and navigate environments','Design and manufacture parts','Integrate AI into robotic systems']}
+];
+const cards=document.getElementById('cards');
+packages.forEach((p,i)=>{cards.innerHTML+=`<article class="card ${i===3?'recommended':''}"><span class="tag">${p.tag}</span><h3>${p.name}</h3><div class="desc">${p.desc}</div><div class="price">${p.price}<span> / year</span></div><div class="monthly">${p.monthly}</div><ul class="points">${p.points.map(x=>`<li>${x}</li>`).join('')}</ul><button class="view" onclick="openModal(${i})">View Full Program →</button></article>`});
+const features=['Electronics fundamentals','Arduino programming','Sensors & motor control','Automation','Obstacle avoidance','Autonomous navigation','ESP32 & IoT','Python','Camera robotics','Computer vision','Object detection','AI integration','ROS / ROS2','LiDAR integration','SLAM (mapping & localization)','Path planning','Robotic arm','CAD + 3D printing','Industry 4.0 automation','Projects included','Annual fee','Monthly equivalent','One-time lab setup'];
+const yes=[[1,1,1,1],[1,1,1,1],[1,1,1,1],[0,1,1,1],[0,1,1,1],[0,1,1,1],[0,0,1,1],[0,0,1,1],[0,0,1,1],[0,0,1,1],[0,0,1,1],[0,0,1,1],[0,0,0,1],[0,0,0,1],[0,0,0,1],[0,0,0,1],[0,0,0,1],[0,0,0,1],[0,0,0,1]];
+let html='<thead><tr><th>FEATURE / CAPABILITY</th>'+packages.map(p=>`<th>${p.name}<br>${p.price}/year</th>`).join('')+'</tr></thead><tbody>';
+features.slice(0,19).forEach((f,r)=>{html+=`<tr><td>${f}</td>${packages.map((p,c)=>`<td class="${yes[r][c]?'yes':'no'}">${yes[r][c]?'✓':'—'}</td>`).join('')}</tr>`});
+html+=`<tr><td>Projects included</td><td>10+ Projects</td><td>14+ Projects</td><td>14+ Projects</td><td>14+1 Projects</td></tr>`;
+html+=`<tr><td>Annual fee</td><td>₹5,000</td><td>₹8,000</td><td>₹12,000</td><td>₹15,000</td></tr>`;
+html+=`<tr><td>Monthly equivalent</td><td>≈ ₹417</td><td>≈ ₹667</td><td>≈ ₹1,000</td><td>≈ ₹1,250</td></tr>`;
+html+=`<tr><td>One-time lab setup</td><td>₹75,000</td><td>₹1,25,000</td><td>₹2,00,000</td><td>₹3,00,000</td></tr></tbody>`;document.getElementById('compare').innerHTML=html;
+function renderDetail(i=3,tab='overview'){
+ const p=packages[i];
+ const detail=document.getElementById('detail');
+ const content={
+  overview:`<div class="detail-grid"><div class="detail-box"><h4>Why this program?</h4><ul>${p.points.map(x=>`<li>${x}</li>`).join('')}</ul></div><div class="detail-box"><h4>What students learn</h4><ul>${p.curr.map(x=>`<li>${x}</li>`).join('')}</ul></div><div class="detail-box"><h4>Student outcomes</h4><ul>${p.outcomes.map(x=>`<li>${x}</li>`).join('')}</ul></div></div>`,
+  curriculum:`<div class="detail-grid"><div class="detail-box"><h4>Curriculum pathway</h4><ul>${p.curr.map((x,n)=>`<li><b>Stage ${n+1}:</b> ${x}</li>`).join('')}</ul></div><div class="detail-box"><h4>Learning method</h4><ul><li>Concept introduction</li><li>Hands-on build</li><li>Coding and testing</li><li>Debugging and improvement</li><li>Project demonstration</li></ul></div></div>`,
+  projects:`<div class="detail-grid"><div class="detail-box"><h4>Project roadmap</h4><ul>${p.projects.map(x=>`<li>${x}</li>`).join('')}</ul></div><div class="detail-box"><h4>Project workflow</h4><ul><li>Plan the problem</li><li>Select components</li><li>Build the prototype</li><li>Program and test</li><li>Improve and showcase</li></ul></div></div>`,
+  components:`<div class="detail-grid"><div class="detail-box"><h4>Student-side components</h4><ul>${p.components.map(x=>`<li>${x}</li>`).join('')}</ul></div><div class="detail-box"><h4>Shared lab infrastructure</h4><ul><li>Engineering workbench</li><li>Testing and prototyping area</li><li>Project tools and safety equipment</li><li>Package-specific advanced equipment</li></ul></div></div>`,
+  investment:`<div class="investment"><div class="metric"><b>${p.price}</b><span>Annual student fee</span></div><div class="metric"><b>${p.monthly}</b><span>Annual fee equivalent</span></div><div class="metric"><b>${p.lab.replace('One-time lab setup: ','')}</b><span>One-time lab setup</span></div><div class="metric"><b>${i===0?'Foundation':i===1?'Autonomous':i===2?'AI + Vision':'AI + Autonomous'}</b><span>Program focus</span></div></div><div class="detail-box" style="margin-top:16px"><h4>What the investment covers</h4><ul><li>Annual hands-on student program</li><li>Guided projects and curriculum</li><li>Program-specific components and equipment access</li><li>School lab setup appropriate to this level</li></ul></div>`,
+  outcomes:`<div class="detail-grid"><div class="detail-box"><h4>Students will be able to</h4><ul>${p.outcomes.map(x=>`<li>${x}</li>`).join('')}</ul></div><div class="detail-box"><h4>School can use the program for</h4><ul><li>STEM and robotics learning</li><li>Student project showcases</li><li>Innovation activities</li><li>Competition preparation and mentoring</li></ul></div></div>`
+ };
+ detail.innerHTML=`<div class="detail-head"><div><span class="most">${p.tag}</span><h3>${p.name} — Complete Program Details</h3><p style="color:var(--muted)">${p.desc}</p></div><button class="secondary" onclick="openModal(${i})">Open Full Program ↗</button></div><div class="tabs" role="tablist">${[['overview','Overview'],['curriculum','Curriculum'],['projects','Projects'],['components','Components & Equipment'],['investment','Investment'],['outcomes','Outcomes']].map(([key,label])=>`<button class="${tab===key?'active':''}" onclick="renderDetail(${i},'${key}')">${label}</button>`).join('')}</div>${content[tab]}<div class="cta"><div><b>Ready to discuss ${p.name}?</b><br><span style="color:var(--muted)">Request a school-specific proposal and implementation discussion.</span></div><button onclick="smoothTo('contact')">Request Program Discussion →</button></div>`;
+}
+
+renderDetail();
+
+
+/* Mobile navigation */
+const hamb=document.getElementById('hamb'), mobileMenu=document.getElementById('mobileMenu');
+
+/* Desktop navigation: smooth, section-aware active state */
+const navLinks=[...document.querySelectorAll('#desktopNav a[data-nav]')];
+const navIds=['top','programs','lab','projects','experience','about-details','contact'];
+function setActiveNav(id){navLinks.forEach(link=>link.classList.toggle('active',link.dataset.nav===id));}
+function smoothTo(id){const el=document.getElementById(id);if(!el)return;const y=el.getBoundingClientRect().top+window.scrollY-82;window.scrollTo({top:Math.max(0,y),behavior:'smooth'});setActiveNav(id);}
+navLinks.forEach(link=>link.addEventListener('click',e=>{e.preventDefault();smoothTo(link.dataset.nav);}));
+const mobileLinks=[...document.querySelectorAll('#mobileMenu a[href^="#"]')];
+mobileLinks.forEach(a=>a.addEventListener('click',e=>{e.preventDefault();const id=a.getAttribute('href').slice(1);smoothTo(id);closeMobileMenu();}));
+let navTick=false;
+function updateActiveOnScroll(){if(navTick)return;navTick=true;requestAnimationFrame(()=>{navTick=false;const marker=window.scrollY+130;let current='top';for(const id of navIds){const el=document.getElementById(id);if(el && el.offsetTop<=marker)current=id;}setActiveNav(current);});}
+window.addEventListener('scroll',updateActiveOnScroll,{passive:true});
+window.addEventListener('resize',updateActiveOnScroll);
+updateActiveOnScroll();
+function closeMobileMenu(){mobileMenu?.classList.remove('open');hamb?.setAttribute('aria-expanded','false')}
+hamb?.addEventListener('click',e=>{e.stopPropagation();const open=!mobileMenu.classList.contains('open');mobileMenu.classList.toggle('open',open);hamb.setAttribute('aria-expanded',String(open))});
+mobileMenu?.querySelectorAll('a').forEach(a=>a.addEventListener('click',closeMobileMenu));
+document.addEventListener('click',e=>{if(mobileMenu?.classList.contains('open') && !mobileMenu.contains(e.target) && e.target!==hamb){closeMobileMenu()}});
+
+/* Keyboard / outside-click accessibility */
+document.addEventListener('keydown',e=>{if(e.key==='Escape'){closeModal();closeMobileMenu()}});
+
+function closeModal(){document.getElementById('modal').classList.remove('open');document.body.style.overflow='';lastFocused?.focus()}
+let lastFocused=null;
+document.getElementById('modal')?.addEventListener('click',e=>{if(e.target.id==='modal')closeModal()});
+
+/* WhatsApp enquiry form — sends details as a pre-filled WhatsApp message */
+document.getElementById('enquiryForm')?.addEventListener('submit',function(e){
+  e.preventDefault();
+  const f=new FormData(this);
+  const text=[
+    'School Enquiry — Techoniq Innovation Labs',
+    `School: ${f.get('school')}`,
+    `Contact Person: ${f.get('person')}`,
+    `Phone: ${f.get('phone')}`,
+    `Email: ${f.get('email')||'—'}`,
+    `Students: ${f.get('students')}`,
+    `Program: ${f.get('program')}`,
+    `Message: ${f.get('message')||'—'}`
+  ].join('\n');
+  window.open('https://wa.me/918619348905?text='+encodeURIComponent(text),'_blank','noopener');
+});
+
+/* Graceful fallback for any image that fails to load */
+document.querySelectorAll('img').forEach(img=>{
+  img.addEventListener('error',()=>img.classList.add('broken'),{once:true});
+});
+
+/* Make program cards open the selected detailed panel as well as the modal */
+function openModal(i){
+ lastFocused=document.activeElement;
+ const p=packages[i];
+ document.getElementById('mTag').textContent=p.tag;document.getElementById('mTitle').textContent=p.name;document.getElementById('mDesc').textContent=p.desc;
+ document.getElementById('mPrice').textContent=p.price+' / year';document.getElementById('mMonthly').textContent=p.monthly;document.getElementById('mLab').textContent=p.lab;
+ document.getElementById('mGrid').innerHTML=`<div class="modal-box"><h4>What students learn</h4><ul>${p.curr.map(x=>`<li>${x}</li>`).join('')}</ul></div><div class="modal-box"><h4>Projects</h4><ul>${p.projects.map(x=>`<li>${x}</li>`).join('')}</ul></div><div class="modal-box"><h4>Components & equipment</h4><ul>${p.components.map(x=>`<li>${x}</li>`).join('')}</ul></div><div class="modal-box"><h4>Outcomes</h4><ul>${p.outcomes.map(x=>`<li>${x}</li>`).join('')}</ul></div>`;
+ document.getElementById('modal').classList.add('open');document.body.style.overflow='hidden';
+ document.querySelector('#modal .close')?.focus();
+}
+
+const ar=document.getElementById('arduino'), stage=document.getElementById('stage');let targetX=0,targetY=0,scroll=0;function move(){const s=scroll*.045;ar.style.transform=`translate3d(${targetX}px,${s+targetY}px,0) rotateX(${targetY/10}deg) rotateY(${targetX/11}deg) rotateZ(${targetX/38}deg)`;requestAnimationFrame(move)}stage.addEventListener('pointermove',e=>{const r=stage.getBoundingClientRect();targetX=(e.clientX-r.left-r.width/2)*.055;targetY=(e.clientY-r.top-r.height/2)*-.04});stage.addEventListener('pointerleave',()=>{targetX=0;targetY=0});window.addEventListener('scroll',()=>{scroll=Math.min(window.scrollY,800)});move();
+</script>
+<script id="techoniq-dynamic-enhancements">
+(function(){
+  // Project image lightbox: tap/click any project image for a larger view.
+  const cards=document.querySelectorAll('.project-card');
+  const overlay=document.createElement('div');
+  overlay.className='image-lightbox';
+  overlay.innerHTML='<button aria-label="Close image">×</button><img alt="Project preview">';
+  document.body.appendChild(overlay);
+  const lbImg=overlay.querySelector('img');
+  overlay.querySelector('button').onclick=()=>overlay.classList.remove('open');
+  overlay.addEventListener('click',e=>{if(e.target===overlay)overlay.classList.remove('open')});
+  cards.forEach(card=>{
+    const img=card.querySelector('img'); if(!img)return;
+    img.style.cursor='zoom-in';
+    img.addEventListener('click',()=>{lbImg.src=img.src;lbImg.alt=img.alt;overlay.classList.add('open')});
+  });
+  document.addEventListener('keydown',e=>{if(e.key==='Escape')overlay.classList.remove('open')});
+
+  // Smooth reveal for sections/cards without causing horizontal movement.
+  const items=document.querySelectorAll('.section-title,.card,.project-card,.experience-card,.detail-box,.about-points>div');
+  if('IntersectionObserver' in window){
+    const io=new IntersectionObserver(entries=>entries.forEach(e=>{if(e.isIntersecting){e.target.classList.add('is-visible');io.unobserve(e.target)}}),{threshold:.08});
+    items.forEach(el=>{el.classList.add('reveal');io.observe(el)});
+  }
+})();
+</script>
+<style>
+.image-lightbox{position:fixed;inset:0;background:rgba(9,18,38,.84);backdrop-filter:blur(10px);display:none;align-items:center;justify-content:center;padding:20px;z-index:200}
+.image-lightbox.open{display:flex}.image-lightbox img{width:auto;max-width:min(94vw,1200px);max-height:88vh;object-fit:contain;border-radius:18px;box-shadow:0 30px 90px rgba(0,0,0,.35)}
+.image-lightbox button{position:absolute;right:20px;top:16px;width:44px;height:44px;border:0;border-radius:50%;background:#fff;color:#10203c;font-size:28px;cursor:pointer}
+.reveal{opacity:0;transform:translateY(18px);transition:opacity .55s ease,transform .55s ease}.reveal.is-visible{opacity:1;transform:none}
+@media(prefers-reduced-motion:reduce){.reveal{opacity:1;transform:none;transition:none}}
+</style>
+
+</body></html>
